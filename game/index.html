@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Twin Lanterns — Spot the Difference</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #120c26; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #ffe9b8; min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  h1 { font-size: 20px; margin: 10px 0 4px; letter-spacing: 0.04em; }
+  p { margin: 0 0 10px; color: #b9a8d9; font-size: 14px; }
+  canvas {
+    width: min(1240px, 96vw); height: auto;
+    background: #1b1430; border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+    cursor: crosshair;
+  }
+  .keys { margin-top: 10px; color: #b9a8d9; font-size: 13px; }
+  .keys b { color: #ffe9b8; }
+</style>
+</head>
+<body>
+<h1>🔎 Twin Lanterns — Spot the Difference</h1>
+<p>Two pictures, seven differences. Click a difference in either picture.</p>
+<canvas id="game" width="1240" height="760" aria-label="Spot the difference game: two pictures side by side"></canvas>
+<div class="keys"><b>Click</b> mark a difference &nbsp;·&nbsp; <b>H</b> hint &nbsp;·&nbsp; <b>R</b> restart level &nbsp;·&nbsp; <b>M</b> menu &nbsp;·&nbsp; <b>Enter</b> continue &nbsp;·&nbsp; <b>1–3</b> choose a level</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
+<!--
+  Twin Lanterns is a complete offline game: every script is a file under
+  game/, every picture is drawn in code, and no network request is made.
+  Levels: Night Market, Garden Pond, Harbour at Dawn — 7 differences each.
+-->
